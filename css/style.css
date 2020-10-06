@@ -91,8 +91,8 @@ header
 #education h2{
     margin-left: 750px;}
 
-#goals{
-    background-image: url(/img/4.jpg);
+#top10{
+    background-image: url(/img/5.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -103,12 +103,12 @@ header
     height: 100vh;
 }   
 
-#goals p{
+#top10 p{
     color: aliceblue;
     font-size: x-large;
 }
 
-#goals h2{
+#top10 h2{
     margin-top: 100px;
     color: aliceblue;
     font-size: xx-large;
@@ -129,4 +129,16 @@ p{
 span{
     color: rgba(0,0,0,.7); 
     text-shadow: 0 1px rgba(255, 255, 255, 0.1);}
+
+ol li{
+    margin-left: 330px;
+    font-weight: 100;
+    font-size: x-large;
+    color: white;
+}   
+
+#top10 h2{
+    text-align: left;
+    margin-left: 330px;;
+}
 
