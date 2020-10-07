@@ -10,6 +10,7 @@ console.log(userName);
 
 alert(`Ya welcome ya welcome ${userName}! You can only answer using y/n or Yes/No, deal?`);
 
+function firstQuestion (){
 var favColor = prompt(`So ${userName}, Is purple my favorite color?`);
 console.log(favColor);
 favColor.toLowerCase();
@@ -23,7 +24,9 @@ if (favColor === 'y' || favColor === 'yes') {
     alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
 }
 console.log(score);
+}
 
+firstQuestion () ;
 var favField = prompt(`Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`);
 console.log(favField);
 favField.toLowerCase();
@@ -119,6 +122,14 @@ for (var i = 0; i < 6; i++) {
         } else {
             alert('Try again');
         }
+      /*  
+      for(var j=0; j<mySongs.length; j++){
+                   if(favSong == mySongs[j]){
+                       score++;
+                       j=6;
+                       break ;
+                   }
+             }*/
     }
 console.log(favSong);    
 alert(`My favorite songs are ${mySongs}`);
