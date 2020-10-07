@@ -10,8 +10,37 @@ console.log(userName);
 
 alert(`Ya welcome ya welcome ${userName}! You can only answer using y/n or Yes/No, deal?`);
 
+
 var favColor = prompt(`So ${userName}, Is purple my favorite color?`);
-console.log(favColor);
+var favField = prompt(`Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`);
+var sport = prompt(`The third question is coming ${userName}, So, do I play Karate?`);
+var food = prompt(`Forth question ${userName}, Is Mansaf the only dish I can cook?`);
+var asac = prompt(`Final question of the first round ${userName}, I'm happy with ASAC?`);
+
+function Question (param){
+    console.log(param);
+    param.toLowerCase();
+    console.log(param);
+    if (param === 'y' || param === 'yes') {
+        alert('Your answer  is correct');
+        score++;
+    } else if (param === 'n' || param === 'no') {
+        alert('Your answer is wrong');
+    } else {
+        alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+    }
+    console.log(score);
+}
+
+Question (favColor) ;
+Question (favField) ;
+Question (sport);
+Question (food);
+Question (asac);
+
+alert('Your score is '+score);
+//var param = prompt(`So ${userName}, Is purple my favorite color?`);
+/*console.log(favColor);
 favColor.toLowerCase();
 console.log(favColor);
 if (favColor === 'y' || favColor === 'yes') {
@@ -24,7 +53,10 @@ if (favColor === 'y' || favColor === 'yes') {
 }
 console.log(score);
 
-var favField = prompt(`Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`);
+*/
+
+
+/*
 console.log(favField);
 favField.toLowerCase();
 console.log(favField);
@@ -38,7 +70,6 @@ if (favField === 'y' || favField === 'yes') {
 }
 console.log(score);
 
-var sport = prompt(`The third question is coming ${userName}, So, do I play Karate?`);
 console.log(sport);
 sport.toLowerCase();
 console.log(sport);
@@ -52,7 +83,6 @@ if (sport === 'y' || sport === 'yes') {
 }
 console.log(score);
 
-var food = prompt(`Forth question ${userName}, Is Mansaf the only dish I can cook?`);
 console.log(food);
 food.toLowerCase();
 console.log(food);
@@ -66,7 +96,6 @@ if (food === 'y' || food === 'yes') {
 }
 console.log(score);
 
-var asac = prompt(`Final question of the first round ${userName}, I'm happy with ASAC?`);
 console.log(asac);
 asac.toLowerCase();
 console.log(asac);
@@ -120,14 +149,18 @@ for (var i = 0; i < 6; i++) {
             alert('Try again');
         }
 
-        // for(var j=0; j<mySongs.length; j++){
-        //       if(favSong == mySongs[j]){
-        //           score++;
-        //           j=6;
-        //       }
-        // }
+       
+      for(var j=0; j<mySongs.length; j++){
+                   if(favSong == mySongs[j]){
+                       score++;
+                       j=6;
+                       break ;
+                   }
+             }
     }
-console.log(favSong);    
+    */
+console.log(favSong); 
+   
 alert(`My favorite songs are ${mySongs}`);
 
 alert(`Thank you ${userName} for playing the game! Your score is ${score} out of 7`);
