@@ -119,6 +119,13 @@ for (var i = 0; i < 6; i++) {
         } else {
             alert('Try again');
         }
+
+        // for(var j=0; j<mySongs.length; j++){
+        //       if(favSong == mySongs[j]){
+        //           score++;
+        //           j=6;
+        //       }
+        // }
     }
 console.log(favSong);    
 alert(`My favorite songs are ${mySongs}`);
