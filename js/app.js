@@ -7,116 +7,36 @@ var score = 0;
 
 var userName = prompt('First, let me know your name :)');
 console.log(userName);
-
 alert(`Ya welcome ya welcome ${userName}! You can only answer using y/n or Yes/No, deal?`);
 
+var questions =[`So ${userName}, Is purple my favorite color?`, `Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`
+, `The third question is coming ${userName}, So, do I play Karate?`, `Forth question ${userName}, Is Mansaf the only dish I can cook?`,
+`Final question of the first round ${userName}, I'm happy with ASAC?`];
 
-var favColor = prompt(`So ${userName}, Is purple my favorite color?`);
-var favField = prompt(`Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`);
-var sport = prompt(`The third question is coming ${userName}, So, do I play Karate?`);
-var food = prompt(`Forth question ${userName}, Is Mansaf the only dish I can cook?`);
-var asac = prompt(`Final question of the first round ${userName}, I'm happy with ASAC?`);
+function Question(param){
+    for(var n=0; n<questions.length;n++){
+        param = prompt(questions[n]);
 
-function Question (param){
-    console.log(param);
-    param.toLowerCase();
-    console.log(param);
-    if (param === 'y' || param === 'yes') {
-        alert('Your answer  is correct');
-        score++;
-    } else if (param === 'n' || param === 'no') {
-        alert('Your answer is wrong');
-    } else {
-        alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
-    }
-    console.log(score);
+        console.log(param);
+        param.toLowerCase();
+        console.log(param);
+    
+        if (param === 'y' || param === 'yes') {
+            alert('Your answer  is correct');
+            score++;
+            console.log(score);
+        } else if (param === 'n' || param === 'no') {
+            alert('Your answer is wrong');
+        } else {
+            alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+        }
+    }   
 }
-
-Question (favColor) ;
-Question (favField) ;
-Question (sport);
-Question (food);
-Question (asac);
-
-alert('Your score is '+score);
-//var param = prompt(`So ${userName}, Is purple my favorite color?`);
-/*console.log(favColor);
-favColor.toLowerCase();
-console.log(favColor);
-if (favColor === 'y' || favColor === 'yes') {
-    alert('Correct! Fatima loves purple and purple loves Fatima<3');
-    score++;
-} else if (favColor === 'n' || favColor === 'no') {
-    alert('Opps! that was not correct, actually purple is my fav color.')
-} else {
-    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
-}
-console.log(score);
-
-*/
-
-
-/*
-console.log(favField);
-favField.toLowerCase();
-console.log(favField);
-if (favField === 'y' || favField === 'yes') {
-    alert('Yay! That was correct :) NLP is the filed of ML I work on');
-    score++;
-} else if (favField === 'n' || favField === 'no') {
-    alert('Uh-Oh, it\'s ok that was a hard question')
-} else {
-    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
-}
-console.log(score);
-
-console.log(sport);
-sport.toLowerCase();
-console.log(sport);
-if (sport === 'y' || sport === 'yes') {
-    alert(`I really appreciate you answred this correctly lol! and yes I used to play Karate and got the black belt.`);
-    score++;
-} else if (sport === 'n' || sport === 'no') {
-    alert('Maybe if we had a match you would answer the question right.')
-} else {
-    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
-}
-console.log(score);
-
-console.log(food);
-food.toLowerCase();
-console.log(food);
-if (food === 'y' || food === 'yes') {
-    alert('I can already smell the Jameed! Good job that was correct! wish me good luck in cooking the rest of food :(');
-    score++;
-} else if (food === 'n' || food === 'no') {
-    alert('Did you just answered with "NO" to Mansaf?!');
-} else {
-    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
-}
-console.log(score);
-
-console.log(asac);
-asac.toLowerCase();
-console.log(asac);
-
-switch (asac) {
-    case 'y':
-    case 'yes':
-        alert('Imagin if MY answer is no lol. That was correct! how did you know that? Ehm Ehmm.');
-        score++;
-        break;
-    case 'n':
-    case 'no':
-        alert('Wait what? Is that a trick or something? I swear I love ASAC!');
-        break;
-    default:
-        alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
-}
-console.log(score);
+Question(questions);
 
 alert('Now for the second round! Ready?')
 
+//QUESTION 6
 var myAge;
 for (var ii=0; ii<4; ii++){
     myAge = prompt('Can you guess my age?');
@@ -136,32 +56,131 @@ console.log(myAge);
 alert('My age is 22');
 console.log(score);
 
-
+//QUESTION 7
 var mySongs = ['mountain', 'believer', 'worriors', 'fighter'];
 var favSong;
 for (var i = 0; i < 6; i++) {
         favSong = prompt('Can you guess one of my favorite songs?');
-        if (favSong == 'mountain' || favSong == 'believer' || favSong == 'worriors' || favSong == 'fighter') {
-            alert('Correct!');
-            score++;
-            break;
-        } else {
-            alert('Try again');
+        for(var j=0; j<mySongs.length; j++){
+            if( mySongs[j] == favSong){
+                alert('Correct!');
+                score++;
+                i=6;
+                break;
+            }
         }
-
-       
-      for(var j=0; j<mySongs.length; j++){
-                   if(favSong == mySongs[j]){
-                       score++;
-                       j=6;
-                       break ;
-                   }
-             }
     }
-    */
-console.log(favSong); 
-   
+console.log(favSong);   
+console.log(score);    
 alert(`My favorite songs are ${mySongs}`);
-
 alert(`Thank you ${userName} for playing the game! Your score is ${score} out of 7`);
 
+
+
+// Question(favColor);
+// Question(favField);
+// Question(sport);
+// Question(food);
+// Question(asac);
+
+// alert('Your score is '+score);
+
+// var favColor = prompt(`So ${userName}, Is purple my favorite color?`);
+// var favField = prompt(`Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`);
+// var sport = prompt(`The third question is coming ${userName}, So, do I play Karate?`);
+// var food = prompt(`Forth question ${userName}, Is Mansaf the only dish I can cook?`);
+// var asac = prompt(`Final question of the first round ${userName}, I'm happy with ASAC?`);
+
+//var param = prompt(`So ${userName}, Is purple my favorite color?`);
+/*
+var favColor = prompt(`So ${userName}, Is purple my favorite color?`);
+console.log(favColor);
+favColor.toLowerCase();
+console.log(favColor);
+if (favColor === 'y' || favColor === 'yes') {
+    alert('Correct! Fatima loves purple and purple loves Fatima<3');
+    score++;
+} else if (favColor === 'n' || favColor === 'no') {
+    alert('Opps! that was not correct, actually purple is my fav color.')
+} else {
+    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+}
+console.log(score);
+
+*/
+
+
+/*
+var favField = prompt(`Now for the second question ${userName}, Is Machine Learning my (study) area of interest?`);
+console.log(favField);
+favField.toLowerCase();
+console.log(favField);
+if (favField === 'y' || favField === 'yes') {
+    alert('Yay! That was correct :) NLP is the filed of ML I work on');
+    score++;
+} else if (favField === 'n' || favField === 'no') {
+    alert('Uh-Oh, it\'s ok that was a hard question')
+} else {
+    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+}
+console.log(score);
+
+var sport = prompt(`The third question is coming ${userName}, So, do I play Karate?`);
+console.log(sport);
+sport.toLowerCase();
+console.log(sport);
+if (sport === 'y' || sport === 'yes') {
+    alert(`I really appreciate you answred this correctly lol! and yes I used to play Karate and got the black belt.`);
+    score++;
+} else if (sport === 'n' || sport === 'no') {
+    alert('Maybe if we had a match you would answer the question right.')
+} else {
+    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+}
+console.log(score);
+
+var food = prompt(`Forth question ${userName}, Is Mansaf the only dish I can cook?`);
+console.log(food);
+food.toLowerCase();
+console.log(food);
+if (food === 'y' || food === 'yes') {
+    alert('I can already smell the Jameed! Good job that was correct! wish me good luck in cooking the rest of food :(');
+    score++;
+} else if (food === 'n' || food === 'no') {
+    alert('Did you just answered with "NO" to Mansaf?!');
+} else {
+    alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+}
+console.log(score);
+
+var asac = prompt(`Final question of the first round ${userName}, I'm happy with ASAC?`);
+console.log(asac);
+asac.toLowerCase();
+console.log(asac);
+
+switch (asac) {
+    case 'y':
+    case 'yes':
+        alert('Imagin if MY answer is no lol. That was correct! how did you know that? Ehm Ehmm.');
+        score++;
+        break;
+    case 'n':
+    case 'no':
+        alert('Wait what? Is that a trick or something? I swear I love ASAC!');
+        break;
+    default:
+        alert('You only can answer using y/n, yes/no. Now you will be taken to the next question');
+}
+console.log(score);
+*/
+
+
+
+    // if (favSong == 'mountain' || favSong == 'believer' || favSong == 'worriors' || favSong == 'fighter') {
+    //     alert('Correct!');
+    //     score++;
+    //     break;
+    // } else {
+    //     alert('Try again');
+    // }
+    
