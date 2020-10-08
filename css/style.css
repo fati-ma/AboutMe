@@ -25,6 +25,10 @@ ul li a:hover
     color:#ffffff 
 }
 
+/* nav{
+    position: fixed;
+} */
+
 header
 {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(/img/1.jpg);
@@ -103,15 +107,17 @@ header
     height: 100vh;
 }   
 
-#top10 p{
-    color: aliceblue;
-    font-size: x-large;
-}
-
 #top10 h2{
     margin-top: 100px;
-    color: aliceblue;
+    color: black;
     font-size: xx-large;
+}
+
+#top10 li{
+
+    margin-top: 15px;
+    color: black;
+    font-size: x-large;
 }
 
 h2{
